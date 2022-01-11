@@ -47,7 +47,7 @@ app.use("/api/users", usersRoute);
 app.use("/api/posts", postRoute)
 app.use("/api/categories", catRoute)
 
-
-app.listen("5000", ()=> {
-    console.log(`runing on port 5000`);
+const port = process.env.PORT || 5000;
+app.listen(port, ()=> {
+    console.log(`runing on port ${port}`);
 })
